@@ -1,0 +1,31 @@
+#############################################################################################
+#     .-.         .--''-.                                                                   #
+#     .'   '.     /'       `.                                                               #
+#     '.     '. ,'          |                     W A X                                     #
+#       o    '.o   ,'        _.-'                    I N D I C A T O R                      #
+#       \.--./'. /.:. :._:.'                                                                #
+#     .\   /'._-':#0: ':#0: ':                      [config.yml]                            #
+#     :(#) (#) :  ':#0: ':#0: ':>#=-                                                        #
+#       ' ____ .'_.:J0:' :J0:' :'                                                           #
+#       'V  V'/ | |":' :'":'                                                                #
+#       \  \ \                                                                              #
+#       '  ' '                                                                              #
+#############################################################################################
+# Sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html                    #
+# Discord: https://discord.gg/knt6J6BFDA                                                    #
+#############################################################################################
+
+# Should a sound be played when a player clicks a waxed block?
+doSound: true
+
+# Should the wax on particle be displayed when clicked?
+doParticle: true
+
+# If enabled above what sound should be played?
+soundSettings:
+  sound: BLOCK_BEEHIVE_WORK
+  vol: 0.5
+  pitch: 1
+
+# Action Bar message - Supports Hex Colors & Color Codes [Hex: &#000000]
+waxedActionBar: "&#D26A2A[&#F7BD28Waxed&#D26A2A]"

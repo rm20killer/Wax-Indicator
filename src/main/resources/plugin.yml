@@ -1,0 +1,8 @@
+name: WaxIndicator
+version: ${project.version}
+main: dev.mrbutters.me.waxindicator.WaxIndicator
+api-version: 1.16
+prefix: WaxIndicator
+authors: [ BUTTERFIELD8 ]
+description: Identifies if copper has been waxed
+website: discord
