@@ -11,14 +11,18 @@ public class HexFormat {
     private static final Pattern pattern = Pattern.compile("&#[a-fA-F0-9]{6}");
 
     public static String format(String msg) {
-        if (Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18") || Bukkit.getVersion().contains("1.19") || Bukkit.getVersion().contains("1.20") ) {
-            Matcher match = pattern.matcher(msg);
-            while (match.find()) {
-                String color = msg.substring(match.start(), match.end());
-                msg = msg.replace(color, ChatColor.of(color.replace("&#","#")) + "");
-                match = pattern.matcher(msg);
+        String version = Bukkit.getVersion();
+        if(version.startsWith("1."))
+        {
+            int majorVersion = Integer.parseInt(version.substring(2, 4));
+            if(majorVersion >= 17)
+            {
+                msg = pattern.matcher(msg).replaceAll(matchResult ->
+                        ChatColor.of(matchResult.group().replace("&#", "#")) + ""
+                );
             }
         }
+
         return ChatColor.translateAlternateColorCodes('&', msg);
     }
 
